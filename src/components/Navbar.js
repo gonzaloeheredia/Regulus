@@ -9,7 +9,6 @@ export default  Navbar = () => {
     
    return (
         <div>
-            <Cart/>
             <Navbar bg="light" expand="lg">
                 <Container>
                     <Navbar.Brand href="#home">Regulus</Navbar.Brand>
@@ -27,6 +26,7 @@ export default  Navbar = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+            <Cart/>
         </div>
     )
 
