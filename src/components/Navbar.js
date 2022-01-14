@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Cart from './CartWidget'
 
-let NavBar = () => {
+const NavBar = () => {
     
    return (
         <div>

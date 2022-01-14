@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './Cart.png';
+import logo from '../images/cart.png';
 
 const Cart = () => {
     return (
