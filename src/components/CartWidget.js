@@ -3,7 +3,7 @@ import logo from './Cart.png';
 
 const Cart = () => {
     return (
-        <img src={logo} alt="cart"></img>
+        <img src={logo} alt="cart" className='Cart'></img>
     );
 }
 

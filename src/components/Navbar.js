@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Cart from './CartWidget'
 
-export default  Navbar = () => {
+let NavBar = () => {
     
    return (
         <div>
@@ -26,8 +26,10 @@ export default  Navbar = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <Cart/>
+            <Cart />
         </div>
     )
 
 }
+
+export default NavBar
