@@ -2,9 +2,11 @@
   text-align: center;
 }
 
-.Cart{
-  width: 1px;
-  height: fit-content;
+.cart{
+  width: 40px;
+  height: 40px;
+  align-content: center;
+  margin-right: 5cm;
 }
 
 .greeting {
