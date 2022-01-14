@@ -9,7 +9,7 @@ export default  Navbar = () => {
     
    return (
         <div>
-            <CartWidge/>
+            <Cart/>
             <Navbar bg="light" expand="lg">
                 <Container>
                     <Navbar.Brand href="#home">Regulus</Navbar.Brand>
