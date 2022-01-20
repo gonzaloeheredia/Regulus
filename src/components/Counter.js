@@ -10,7 +10,7 @@ const [count, setCount] = useState(0)
 const handlerCount = () => setCount(count+ 1)
 
    (    <Container>
-            {count}
+            <h2>{count}</h2>
             <Button variant="light" onClick={handlerCount}>More</Button>
         </Container>    
     )
