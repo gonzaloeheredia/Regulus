@@ -15,12 +15,16 @@ const ItemsListContainer = () =>  {
 
           setTimeout( () => (
             resolved(
-              <Products/>
+              [Products]
             )
           ), 2000)
         }
-        ).then((resultado) => {setItems(resultado)});
+        ).then((resultado) => {setItems(resultado)})
+        .catch(err => console.log(err))
+        .finally((fin)=> console.log(fin))
+        
       }, []
+
   );
 
   return (
