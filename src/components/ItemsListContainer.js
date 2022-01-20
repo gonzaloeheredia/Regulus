@@ -10,12 +10,12 @@ const ItemsListContainer = () =>  {
 
   const  [items, setItems]= useState([])
 
-  useEffect(()=>{
+      useEffect(()=>{
         new Promise ((resolved, rejected) => {
 
           setTimeout( () => (
             resolved(
-              Products
+              <Products/>
             )
           ), 2000)
         }
@@ -27,7 +27,7 @@ const ItemsListContainer = () =>  {
     <Container>
       <Row>
         <Col> 
-            <ItemsList prop = {items}/>
+            <ItemsList item = {items}/>
         </Col>
       </Row>
     </Container>
