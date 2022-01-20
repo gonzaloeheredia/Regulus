@@ -3,8 +3,8 @@ import Item from './Item';
 
 const ItemsList = (prop) => (
     <>
-        {prop.item.map((x) => (
-             <Item props={x} key={x.id}/>
+        {prop.item.map((x, index) => (
+             <Item props={x} key={index}/>
             ))
         }
     </>
