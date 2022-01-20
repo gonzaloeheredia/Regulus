@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Counter from './Counter';
 
 
 
@@ -20,6 +21,7 @@ return(
             </Card.Text>
             <Button variant="primary">Go somewhere</Button>
             </Card.Body>
+            <Counter/>
        </Card>
     </>
   )

@@ -3,8 +3,8 @@ import Item from './Item';
 
 const ItemsList = ({items}) => (
     <>
-        {{items}.map(() => (
-             <Item/>
+        {{items}.map((x) => (
+             <Item props={x}/>
             ))
         }
     </>
