@@ -1,19 +1,25 @@
 
-import React, { useState } from 'react';
-import { Container } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button'
 
-let Counter =() => {
+export default function Counter( {stock, initial, onAdd}) {
+     
 
-const [count, setCount] = useState(0)
+       
+  const  buyMore = (e, nuevoStock) => {
+      e.preventDefault();
+      setStockActual((stock) => stock - nuevoStock);
+  }
 
-const handlerCount = () => setCount(count+ 1)
-
-   (    <Container>
-            <h2>{count}</h2>
-            <Button variant="light" onClick={handlerCount}>More</Button>
-        </Container>    
-    )
+    const  devolution = (e, nuevoStock) => {
+        e.preventDefault();
+        devolverStock((stock) => stock + nuevoStock);   
+    }   
+      
+          
+    <div>
+        <input placeholder={initial}>{stock}</input>
+        <Button variant="light" onClick= { stock > 0 ? ((e) => buyMore(e, 1)) : ((e) => e.preventDefault())}>+</Button>
+        <Button variant="danger" onClick={onAdd()}>Add to Cart</Button>   
+        <Button variant="light" onClick= { stock <= 5 ? ((e) => devolution(e, 1)) : ((e) => e.preventDefault())}>-</Button>
+    </div>
 }
-
-export default Counter

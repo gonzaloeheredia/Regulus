@@ -19,7 +19,7 @@ const ItemsListContainer = () =>  {
             )
           ), 2000)
         }
-        ).then((items) => {setItems(items)})
+        ).then((resultado) => {setItems(resultado)})
         .catch(err => console.log(err))
         .finally((fin)=> console.log(fin))
         

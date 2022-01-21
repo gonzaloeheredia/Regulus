@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Counter from './Counter';
@@ -6,6 +6,11 @@ import Counter from './Counter';
 
 
 const Item = (props) => {
+
+  const [stock, onAdd] = useState(5);   
+  const onAdd = () => {
+    console.log('Agregaste tu compra al carrito')
+ }
 
 return(
     <>
@@ -21,7 +26,7 @@ return(
             </Card.Text>
             <Button variant="primary">Go somewhere</Button>
             </Card.Body>
-            <Counter/>
+            <Counter stock={stock} initial={1} add={onAdd} />
        </Card>
     </>
   )
