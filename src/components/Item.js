@@ -8,10 +8,7 @@ import Counter from './Counter';
 const Item = (props) => {
 
   const [stock, onAdd] = useState(5);   
-  const onAdd = () => {
-    console.log('Agregaste tu compra al carrito')
- }
-
+  
 return(
     <>
         <Card style={{ width: '18rem' }}>

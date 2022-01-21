@@ -8,14 +8,18 @@ export default function Counter( {stock, initial, onAdd}) {
   const  buyMore = (e, nuevoStock) => {
       e.preventDefault();
       setStockActual((stock) => stock - nuevoStock);
-  }
+    }
 
     const  devolution = (e, nuevoStock) => {
         e.preventDefault();
         devolverStock((stock) => stock + nuevoStock);   
     }   
       
-          
+    const onAdd = () => {
+        console.log('Agregaste tu compra al carrito')
+     }
+
+
     <div>
         <input placeholder={initial}>{stock}</input>
         <Button variant="light" onClick= { stock > 0 ? ((e) => buyMore(e, 1)) : ((e) => e.preventDefault())}>+</Button>
