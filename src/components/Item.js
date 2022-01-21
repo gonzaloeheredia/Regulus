@@ -7,7 +7,11 @@ import Counter from './Counter';
 
 const Item = (props) => {
 
-  const [stock, onAdd] = useState(5);   
+  const [stock, onAdd] = useState(5); 
+  const add = () => {
+    onAdd(console.log('Agregaste tu compra al carrito'))
+ }
+
     
 return(
     <>
@@ -23,7 +27,7 @@ return(
             </Card.Text>
             <Button variant="primary">Go somewhere</Button>
             </Card.Body>
-            <Counter stock={stock} initial={1} add={onAdd} />
+            <Counter stock={stock} initial={1} add={add} />
        </Card>
     </>
   )
