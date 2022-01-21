@@ -1,7 +1,7 @@
 
 import Button from 'react-bootstrap/Button'
 
-export default function Counter( {stock, initial, add}) {
+export default function Counter( {stock, initial, onAdd}) {
      
            
   const  buyMore = (e, nuevoStock) => {
@@ -19,7 +19,7 @@ export default function Counter( {stock, initial, add}) {
     <div>
         <input placeholder={initial}>{stock}</input>
         <Button variant="light" onClick= { stock > 0 ? ((e) => buyMore(e, 1)) : ((e) => e.preventDefault())}>+</Button>
-        <Button variant="danger" onClick={add}>Add to Cart</Button>   
+        <Button variant="danger" onClick={onAdd}>Add to Cart</Button>   
         <Button variant="light" onClick= { stock <= 5 ? ((e) => devolution(e, 1)) : ((e) => e.preventDefault())}>-</Button>
     </div>
 }
