@@ -7,7 +7,10 @@ import Counter from './Counter';
 
 const Item = (props) => {
 
-  const [stock, onAdd] = useState(5);   
+  const [stock, onAdd] = useState(5); 
+  const onAdd = () => {
+    console.log('Agregaste tu compra al carrito')
+ }  
   
 return(
     <>

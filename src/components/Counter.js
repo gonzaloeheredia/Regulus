@@ -15,9 +15,7 @@ export default function Counter( {stock, initial, add}) {
         devolverStock((stock) => stock + nuevoStock);   
     }   
       
-    const onAdd = () => {
-        console.log('Agregaste tu compra al carrito')
-     }
+    
 
 
     <div>
