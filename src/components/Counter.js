@@ -3,19 +3,21 @@ import Button from 'react-bootstrap/Button'
 
 export default function Counter( {stock, initial, add}) {
      
-
+    let newStock = 0
        
   const  buyMore = (e, nuevoStock) => {
       e.preventDefault();
-      setStockActual((stock) => stock - nuevoStock);
+      return newStock = stock - nuevoStock;
     }
 
     const  devolution = (e, nuevoStock) => {
         e.preventDefault();
-        devolverStock((stock) => stock + nuevoStock);   
+        return newStock = stock + nuevoStock;   
     }   
       
-    
+    const onAdd = () => {
+        console.log('Agregaste tu compra al carrito')
+     }
 
 
     <div>
