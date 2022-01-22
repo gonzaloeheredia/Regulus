@@ -6,7 +6,7 @@ import Products from  '../ProductsList/Products';
 
 const CounterContainer = () => {
 
-    const [stock, setStock] = useState(Products[0].unit);
+    const [stock, setStock] = useState(5);
 
     const onAdd = ( q ) => {
         if( q <= stock){
