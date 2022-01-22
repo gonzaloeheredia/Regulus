@@ -1,25 +1,31 @@
+import React, { useState } from 'react';
+import { Container, Button } from 'react-bootstrap';
 
-import Button from 'react-bootstrap/Button'
+export const Counter = ({ initial = 1, stock, onAdd }) => {
 
-export default function Counter( {stock, initial, onAdd}) {
-     
-           
-  const  buyMore = (e, nuevoStock) => {
-      e.preventDefault();
-      return stock - nuevoStock;
-    }
+    const [counter, setCounter] = useState( initial );
 
-    const  devolution = (e, nuevoStock) => {
-        e.preventDefault();
-        return stock + nuevoStock;   
-    }   
-      
-    
+    const handleAdd = () => {
+        if ( counter < stock ) {
+            setCounter( counter + 1 );
+        };
+    };
 
-    <div>
-        <input placeholder={initial}>{stock}</input>
-        <Button variant="light" onClick= { stock > 0 ? ((e) => buyMore(e, 1)) : ((e) => e.preventDefault())}>+</Button>
-        <Button variant="danger" onClick={onAdd}>Add to Cart</Button>   
-        <Button variant="light" onClick= { stock <= 5 ? ((e) => devolution(e, 1)) : ((e) => e.preventDefault())}>-</Button>
-    </div>
+    const handleSubstract = () => {
+        if ( counter > 1) {
+            setCounter( counter - 1 );
+        };
+    };
+
+    return (
+        <Container>
+            <p> Stock: { stock }</p>
+            <Button variant="light" onClick={ handleSubstract }>  - </Button>
+            <input value={ counter }/>
+            <Button variant="light" onClick={ handleAdd }> + </Button>
+            <Container style={{display:'flex'}}>
+                <Button variant="outline-danger" onClick={ (e) => onAdd( counter ) }>Buy </Button>
+            </Container>
+        </Container>
+    )
 }
