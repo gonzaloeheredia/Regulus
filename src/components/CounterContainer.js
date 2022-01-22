@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Counter } from './Counter';
 import { Container } from 'react-bootstrap';
-import Products from  '../ProductsList/Products';
 
 
 const CounterContainer = () => {
