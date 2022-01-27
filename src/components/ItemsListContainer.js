@@ -29,11 +29,7 @@ const ItemsListContainer = () =>  {
 
   return (
     <Container>
-      <Row>
-        <Col> 
-            <ItemsList item = {items}/>
-        </Col>
-      </Row>
+        <ItemsList item = {items}/> 
     </Container>
   );
 }

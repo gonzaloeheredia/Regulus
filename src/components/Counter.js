@@ -18,13 +18,13 @@ export const Counter = ({ initial = 1, stock, onAdd }) => {
     };
 
     return (
-        <Container>
-            <p> Stock: { stock }</p>
+        <Container className='counter'>
+            <p className='stockClass'> Stock: { stock }</p>
             <Button variant="light" onClick={ handleSubstract }>  - </Button>
-            <input value={ counter }/>
+            <input value={ counter }  className='inputSize'/>
             <Button variant="light" onClick={ handleAdd }> + </Button>
-            <Container style={{display:'flex'}}>
-                <Button variant="outline-danger" onClick={ (e) => onAdd( counter ) }>Buy </Button>
+            <Container>
+                <Button variant="secondary" size="lg"  onClick={ () => onAdd( counter ) }>Buy </Button>
             </Container>
         </Container>
     )

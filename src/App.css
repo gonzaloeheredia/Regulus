@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .cart{
   width: 40px;
   height: 40px;
@@ -9,6 +10,42 @@
   margin-right: 5cm;
 }
 
-.greeting {
+.price{
+  height: 0.5cm;
+  margin-bottom: 0cm;
+  font-style: italic;
   text-align: center;
 }
+
+.counter{
+  margin: 0cm;
+  padding: 0cm;
+
+}
+
+.inputSize{
+  width: 1.3cm;
+}
+
+.searchIcon{
+  height: 0.5cm;
+  width: 0.5cm;
+  margin-left: 6cm;
+}
+
+
+.stockClass{
+  font-size: 0.4cm;
+  text-align: center;
+  
+  font-family: 'Bangers', cursive;
+
+}
+
+.tittleClass{
+  
+  height: 1cm;
+  width: 18cm;
+  font-family: 'Lobster', cursive;
+}
+
