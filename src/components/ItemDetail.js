@@ -1,15 +1,14 @@
 import React from 'react';
-import {Modal} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 
-const ItemDetail = (props) => {
+const ItemDetail = (prop) => {
 
   return (
     <>
-        <Modal.Header closeButton>
-          <Modal.Title>{props.item.name}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{props.item.description}</Modal.Body>
-        
+      <Container>
+        <h2> Name: {prop.item.name}</h2>
+        <p> Description: {prop.item.description}</p>
+      </Container>
     </>
   );
 }

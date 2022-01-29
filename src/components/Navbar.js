@@ -4,28 +4,39 @@ import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Cart from './CartWidget'
+import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
     
    return (
         <div>
-            <Navbar bg="light" expand="lg" fixed="top">
+            <Navbar bg="light" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home">Regulus</Navbar.Brand>
+                    <NavLink to='/'>
+                        <Navbar.Brand href="#home">Regulus</Navbar.Brand>
+                    </NavLink>                 
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Offers</Nav.Link>
-                        <NavDropdown title="Variety" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Inside</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Outside</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">US</NavDropdown.Item>
-                        </NavDropdown>
+                    <NavLink to='/'>
+                        <Nav.Link href="#home">Home</Nav.Link> 
+                    </NavLink>    
+                    <NavDropdown title="Variety" id="basic-nav-dropdown">
+                        <NavLink to='/category/inside'> 
+                            <NavDropdown.Item href="#action/3.1">Inside</NavDropdown.Item>
+                        </NavLink>
+                        <NavLink to='/category/outside'> 
+                            <NavDropdown.Item href="#action/3.2">Outside</NavDropdown.Item>
+                        </NavLink>
+                    </NavDropdown>
                     </Nav>
                     </Navbar.Collapse>
+                    <NavLink to='/cart'>
+                        <Cart/>
+                    </NavLink>
                 </Container>
-                <Cart/>
+                
+                
             </Navbar>
             
         </div>

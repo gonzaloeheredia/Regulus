@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import CounterContainer from './CounterContainer';
-import {Modal, Card, Button} from 'react-bootstrap';
-import ItemDetailContainer from './ItemDetailContainer';
+import {Card, Button} from 'react-bootstrap';
+import { NavLink } from 'react-router-dom'
+import Products from './ProductsList/Products';
 
 const Item = (props) => {
    
-      const [show, setShow] = useState(false);
-      const handleClose = () => setShow(false);
-      const handleShow = () => setShow(true);
-
-
-return(
+      return(
       <>
-            <Card style={{ width: '20rem', height:'32rem', marginTop: '2.5cm', marginRight:'0.2cm' , paddingTop:'0.4cm', paddingLeft: '0.5cm', paddingRight: '0.5cm'}} border="dark">
+            <Card style={{ width: '20rem', height:'33rem', marginTop: '2.5cm', marginRight:'0.2cm' , paddingTop:'0.4cm', paddingLeft: '0.5cm', paddingRight: '0.5cm'}} border="dark">
               <Card.Title className='tittleClass'>{props.props.name}</Card.Title>
               <Card.Img style={{ width: '15rem', height:'15rem'}} src={props.props.imgUrl} />
               <Card.Body>
@@ -20,10 +16,9 @@ return(
                         <p className='price'> Price: USD {props.props.usd}</p> 
                   </Card.Text>
                   <CounterContainer/>
-                  <Modal show={show} onHide={handleClose}>
-                    <ItemDetailContainer/>
-                  </Modal>
-                  <Button variant="outline-success" onClick={handleShow}> Click for details </Button>
+                  <NavLink to={`/detalle/${props.props.id}`}>  
+                        <Button variant="outline-success"> Click for details </Button>
+                  </NavLink>
                </Card.Body>
             </Card>
       </>

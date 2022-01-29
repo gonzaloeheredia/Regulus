@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
-import ItemDetails from './ItemDetail'
+import ItemDetail from './ItemDetail'
 import Products from './ProductsList/Products';
 
 
@@ -15,14 +15,14 @@ const ItemDetailContainer = () => {
           },  1000)
         }
         ).then(
-            (resultado) => {getItems(resultado)}
+            (res) => {getItems(res)}
         );
       }, []
   );
 
   return (
     <Container>
-      <ItemDetails item = {itemsDetails}/>
+      <ItemDetail item={itemsDetails}/>
     </Container>
   );
 }
