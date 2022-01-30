@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
         ).then(
             (res) => {getItems(res)}
         );
-      }, []
+      }, [id]
   );
 
   return (
