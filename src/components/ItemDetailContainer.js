@@ -13,8 +13,8 @@ const ItemDetailContainer = () => {
   useEffect(()=>{
         new Promise ((resolved, rejected) => {
           setTimeout( () => { 
-            if (category) {
-              resolved(Products.find((p) => p.category === Products.id));
+            if (Products) {
+               resolved(Products.find((p) => p.id === id));
             } else {
               resolved(Products);
             }
